@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فیلم TV | تماشای فیلم</title>
+<style>
+:root{--bg:#080909;--panel:#121414;--panel2:#191b1b;--yellow:#ffd400;--muted:#a9aeae;--line:#303434}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f6f6f6;font-family:Tahoma,Arial,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:9px;padding:11px 16px;background:var(--yellow);color:#111;font-weight:bold}button.secondary{background:transparent;color:#fff;border:1px solid #686868}button:hover{filter:brightness(1.08)}header{position:sticky;top:0;z-index:5;background:#090a0aee;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:14px 5%;gap:14px;backdrop-filter:blur(10px)}.logo{font-size:25px;font-weight:900;color:var(--yellow);white-space:nowrap}.logo span{background:var(--yellow);color:#111;border-radius:6px;padding:2px 5px;margin-right:4px}nav{display:flex;gap:8px;flex-wrap:wrap}nav button{background:transparent;color:#eee;padding:9px 12px}nav button.active,nav button:hover{color:var(--yellow)}.wrap{max-width:1200px;margin:auto;padding:24px 5%}.hero{min-height:270px;border:1px solid #343434;border-radius:18px;padding:34px;display:flex;align-items:center;background:radial-gradient(circle at 20% 50%,#4a3900,transparent 34%),linear-gradient(115deg,#1d1d1b,#090a0a 70%);overflow:hidden}.hero h1{font-size:clamp(27px,4vw,44px);margin:0 0 12px}.hero p{color:#d4d4d4;line-height:1.9}.yellow{color:var(--yellow)}.searchbar{display:flex;gap:8px;margin-top:18px;max-width:560px}.searchbar input{flex:1;min-width:0}.field,input,textarea{background:#0b0c0c;color:#fff;border:1px solid #424646;border-radius:8px;padding:12px;width:100%;outline:none}.field:focus,input:focus,textarea:focus{border-color:var(--yellow)}.section-head{display:flex;align-items:center;justify-content:space-between;margin:28px 0 14px}.section-head h2{font-size:20px;margin:0}.movies{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:16px}.movie{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;cursor:pointer;transition:.2s}.movie:hover{transform:translateY(-3px);border-color:var(--yellow)}.poster{height:190px;display:grid;place-items:center;font-size:54px;font-weight:900;color:#fff;background:linear-gradient(145deg,#424242,#111);position:relative}.poster:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#000b,transparent 65%)}.poster span{z-index:1;text-shadow:0 3px 10px #000}.movie:nth-child(3n+1) .poster{background:linear-gradient(145deg,#20414a,#080b0c 65%,#a15b00)}.movie:nth-child(3n+2) .poster{background:linear-gradient(145deg,#57400b,#131313 65%,#8d1515)}.movie:nth-child(3n) .poster{background:linear-gradient(145deg,#343c58,#0a0a0b 65%,#6c2d18)}.movie-info{padding:12px}.movie-info h3{font-size:14px;margin:0 0 8px}.muted{color:var(--muted);font-size:12px}.rating{color:var(--yellow);font-size:12px;margin-top:8px}.page{display:none}.page.active{display:block}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;margin:14px 0}.formbox{max-width:480px;margin:28px auto}.formbox h2{color:var(--yellow);margin-top:0}.formbox form{display:grid;gap:12px}.note{color:var(--muted);font-size:12px;line-height:1.8}.player{width:100%;aspect-ratio:16/9;background:#000;border:1px solid #383838;border-radius:12px;display:grid;place-items:center;color:var(--yellow);margin-bottom:15px}.player video{width:100%;height:100%;background:#000;border-radius:12px}.two-col{display:grid;grid-template-columns:2fr 1fr;gap:20px}.comments{display:grid;gap:12px}.comment{border-bottom:1px solid var(--line);padding:10px 0;line-height:1.8}.admin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}.stat{background:#0b0c0c;border:1px solid var(--line);border-radius:10px;padding:16px}.stat b{display:block;color:var(--yellow);font-size:24px;margin-top:8px}.footer{text-align:center;color:#777;padding:30px 10px;border-top:1px solid var(--line);margin-top:40px}a{color:var(--yellow)}.hidden{display:none!important}@media(max-width:700px){header{align-items:flex-start;flex-direction:column}.hero{padding:22px}.two-col{grid-template-columns:1fr}.poster{height:165px}.wrap{padding:18px 4%}.movies{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">فیلم <span>TV</span></div>
+  <nav>
+    <button class="active" data-page="home">⌂ خانه</button>
+    <button data-page="search">⌕ جست‌وجو</button>
+    <button data-page="profile">♙ پروفایل</button>
+    <button data-page="login">ورود</button>
+    <button data-page="register">ثبت‌نام</button>
+    <button data-page="admin">پنل مدیر</button>
+  </nav>
+</header>
+<main class="wrap">
+<section id="home" class="page active">
+  <div class="hero"><div><div class="yellow">دنیای فیلم‌ها در یک جا</div><h1>به <span class="yellow">فیلم TV</span> خوش آمدید</h1><p>فیلم مورد علاقه‌ات را پیدا کن و از تماشای آن لذت ببر.</p><div class="searchbar"><input id="homeSearch" placeholder="نام فیلم را جست‌وجو کن..."><button onclick="doSearch('homeSearch')">جست‌وجو</button></div></div></div>
+  <div class="section-head"><h2>★ فیلم‌های پیشنهادی</h2><span class="muted">منتخب فیلم TV</span></div>
+  <div id="homeMovies" class="movies"></div>
+</section>
+<section id="search" class="page">
+  <div class="section-head"><h2>جست‌وجوی فیلم</h2></div>
+  <div class="searchbar"><input id="searchInput" placeholder="اسم فیلم را بنویس..."><button onclick="renderSearch()">جست‌وجو</button></div>
+  <div id="searchResults" class="movies" style="margin-top:20px"></div>
+</section>
+<section id="profile" class="page">
+  <div class="panel"><h2>پروفایل کاربری</h2><div id="profileContent">برای دیدن پروفایل، ابتدا وارد حساب خود شوید.</div></div>
+</section>
+<section id="login" class="page">
+  <div class="panel formbox"><h2>ورود به حساب</h2><form id="loginForm"><input id="loginEmail" type="email" placeholder="ایمیل" required><input id="loginPassword" type="password" placeholder="رمز عبور" required><button>ورود</button></form><p class="note">حساب ندارید؟ <a href="#" onclick="showPage('register')">ثبت‌نام کنید</a></p><p id="loginMsg" class="note"></p></div>
+</section>
+<section id="register" class="page">
+  <div class="panel formbox"><h2>ساخت حساب کاربری</h2><form id="registerForm"><input id="regName" placeholder="نام نمایشی" required><input id="regEmail" type="email" placeholder="ایمیل" required><input id="regPhone" type="tel" placeholder="شماره موبایل" required><input id="regPassword" type="password" minlength="8" placeholder="رمز عبور (حداقل ۸ کاراکتر)" required><button>ثبت‌نام</button></form><p class="note">این نسخه نمایشی است؛ اطلاعات در همین مرورگر ذخیره می‌شود و سامانه ایمیل یا پیامک واقعی ندارد.</p><p id="registerMsg" class="note"></p></div>
+</section>
+<section id="watch" class="page">
+  <button class="secondary" onclick="showPage('home')">← بازگشت</button>
+  <div class="two-col" style="margin-top:16px"><div><div class="player" id="playerBox"><div>▶<p>برای پخش، مدیر باید فایل ویدئو را بارگذاری کند.</p></div></div><h2 id="watchTitle">عنوان فیلم</h2><p id="watchDesc" class="muted"></p><button id="favoriteBtn" onclick="toggleFavorite()">♡ افزودن به علاقه‌مندی‌ها</button></div>
+  <aside class="panel"><h3 class="yellow">دیدگاه‌ها</h3><form id="commentForm"><textarea id="commentText" rows="3" placeholder="نظر خود را بنویس..." required></textarea><button style="margin-top:8px">ارسال دیدگاه</button></form><div id="comments" class="comments" style="margin-top:14px"></div></aside></div>
+</section>
+<section id="admin" class="page">
+  <div id="adminLogin" class="panel formbox"><h2>ورود مدیر</h2><p class="note">برای نسخه نمایشی از نام کاربری و رمز مدیر تنظیم‌شده در کد استفاده می‌شود. پیش از انتشار، احراز هویت امن سمت سرور را راه‌اندازی کنید.</p><form id="adminLoginForm"><input id="adminUser" placeholder="نام کاربری مدیر" required><input id="adminPass" type="password" placeholder="رمز مدیر" required><button>ورود به پنل</button></form><p id="adminMsg" class="note"></p></div>
+  <div id="adminDashboard" class="hidden">
+    <div class="section-head"><h2>پنل مدیریت <span class="yellow">فیلم TV</span></h2><button class="secondary" onclick="adminLogout()">خروج مدیر</button></div>
+    <div class="admin-grid"><div class="stat">تعداد فیلم‌ها<b id="movieCount">0</b></div><div class="stat">بخش مدیریت<b>فعال</b></div></div>
+    <div class="panel"><h3>آپلود فیلم جدید</h3><form id="uploadForm" style="display:grid;gap:12px"><input id="movieTitle" placeholder="نام فیلم" required><input id="movieDesc" placeholder="توضیحات کوتاه"><label class="note">فایل ویدئو (MP4 یا WebM)<input id="movieFile" type="file" accept="video/mp4,video/webm" required style="margin-top:8px"></label><label class="note">تصویر پوستر (اختیاری)<input id="posterFile" type="file" accept="image/*" style="margin-top:8px"></label><button>افزودن فیلم به این مرورگر</button></form><p class="note">محدودیت نسخه نمایشی: فایل‌ها فقط در همین مرورگر/دستگاه در دسترس‌اند و با پاک شدن داده‌های مرورگر ممکن است حذف شوند. برای سایت واقعی به سرور و فضای ذخیره‌سازی نیاز است.</p><p id="uploadMsg" class="note"></p></div>
+    <div class="panel"><h3>مدیریت فیلم‌ها</h3><div id="adminMovies"></div></div>
+  </div>
+</section>
+</main>
+<div class="footer">© فیلم TV — نسخه نمایشی اولیه</div>
+<script>
+const seedMovies=[
+ {id:'m1',title:'جان ویک',desc:'اکشن • ماجراجویی',rating:'8.1',symbol:'JW'},
+ {id:'m2',title:'تلقین',desc:'علمی‌تخیلی • معمایی',rating:'8.8',symbol:'IN'},
+ {id:'m3',title:'بتمن',desc:'اکشن • جنایی',rating:'8.2',symbol:'BAT'},
+ {id:'m4',title:'میان‌ستاره‌ای',desc:'علمی‌تخیلی • درام',rating:'8.6',symbol:'★'},
+ {id:'m5',title:'انتقام‌جویان',desc:'اکشن • ماجراجویی',rating:'8.7',symbol:'AV'},
+ {id:'m6',title:'تلماسه',desc:'علمی‌تخیلی • ماجراجویی',rating:'8.0',symbol:'DUNE'}
+];
+let movies=seedMovies, currentMovie=null, currentUser=null, adminOn=false, users=[];
+const $=id=>document.getElementById(id);
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='profile')renderProfile();if(id==='search')renderSearch();window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+function movieCard(m){return `<article class="movie" onclick="openMovie('${m.id}')"><div class="poster" ${m.poster?`style="background-image:linear-gradient(0deg,#000b,transparent),url('${m.poster}');background-size:cover;background-position:center"`:''}><span>${m.poster?'':esc(m.symbol||'▶')}</span></div><div class="movie-info"><h3>${esc(m.title)}</h3><div class="muted">${esc(m.desc||'فیلم')}</div><div class="rating">★ ${m.rating||'جدید'}</div></div></article>`}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderHome(){$('homeMovies').innerHTML=movies.map(movieCard).join('')||'<p class="muted">هنوز فیلمی اضافه نشده است.</p>';renderSearch();renderAdminMovies()}
+function doSearch(id){$('searchInput').value=$(id).value;showPage('search');renderSearch()}
+function renderSearch(){if(!$('searchResults'))return;let q=($('searchInput').value||$('homeSearch').value||'').trim().toLowerCase();let list=movies.filter(m=>m.title.toLowerCase().includes(q));$('searchResults').innerHTML=list.map(movieCard).join('')||'<p class="muted">فیلمی پیدا نشد.</p>'}
+$('searchInput').addEventListener('input',renderSearch);
+function openMovie(id){currentMovie=movies.find(m=>m.id===id);if(!currentMovie)return;showPage('watch');$('watchTitle').textContent=currentMovie.title;$('watchDesc').textContent=currentMovie.desc||'فیلم';$('playerBox').innerHTML=currentMovie.video?`<video controls playsinline src="${currentMovie.video}"></video>`:'<div style="text-align:center">▶<p>برای این فیلم هنوز فایل ویدئو ثبت نشده است.</p></div>';renderComments();$('favoriteBtn').textContent=(currentUser?.favorites||[]).includes(id)?'♥ حذف از علاقه‌مندی‌ها':'♡ افزودن به علاقه‌مندی‌ها'}
+function toggleFavorite(){if(!currentUser){showPage('login');return}currentUser.favorites=currentUser.favorites||[];let i=currentUser.favorites.indexOf(currentMovie.id);if(i<0)currentUser.favorites.push(currentMovie.id);else currentUser.favorites.splice(i,1);$('favoriteBtn').textContent=i<0?'♥ حذف از علاقه‌مندی‌ها':'♡ افزودن به علاقه‌مندی‌ها'}
+function renderComments(){let a=currentMovie.comments||[];$('comments').innerHTML=a.map(c=>`<div class="comment"><b>${esc(c.name)}</b><div>${esc(c.text)}</div></div>`).join('')||'<p class="muted">هنوز دیدگاهی ثبت نشده است.</p>'}
+$('commentForm').addEventListener('submit',e=>{e.preventDefault();if(!currentUser){alert('برای ثبت دیدگاه ابتدا وارد حساب شوید.');showPage('login');return}currentMovie.comments=currentMovie.comments||[];currentMovie.comments.push({name:currentUser.name,text:$('commentText').value.trim()});$('commentText').value='';renderComments()});
+$('registerForm').addEventListener('submit',e=>{e.preventDefault();let email=$('regEmail').value.trim().toLowerCase();if(users.some(u=>u.email===email)){$('registerMsg').textContent='این ایمیل قبلاً ثبت شده است.';return}let u={name:$('regName').value.trim(),email,phone:$('regPhone').value.trim(),password:$('regPassword').value,favorites:[]};users.push(u);currentUser=u;$('registerMsg').textContent='حساب نمایشی ساخته شد. خوش آمدید!';showPage('profile')});
+$('loginForm').addEventListener('submit',e=>{e.preventDefault();let u=users.find(x=>x.email===$('loginEmail').value.trim().toLowerCase()&&x.password===$('loginPassword').value);if(!u){$('loginMsg').textContent='حساب پیدا نشد یا اطلاعات ورود اشتباه است. در نسخه نمایشی ابتدا ثبت‌نام کنید.';return}currentUser=u;showPage('profile')});
+function renderProfile(){if(!currentUser){$('profileContent').innerHTML='برای دیدن پروفایل، ابتدا وارد حساب خود شوید. <button onclick="showPage(\\'login\\')">ورود</button>';return}$('profileContent').innerHTML=`<h3>${esc(currentUser.name)}</h3><p class="muted">${esc(currentUser.email)} · ${esc(currentUser.phone)}</p><h3>علاقه‌مندی‌ها</h3><div class="movies">${movies.filter(m=>(currentUser.favorites||[]).includes(m.id)).map(movieCard).join('')||'<p class="muted">هنوز فیلمی ذخیره نکرده‌اید.</p>'}</div><button class="secondary" onclick="logoutUser()">خروج از حساب</button>`}
+function logoutUser(){currentUser=null;showPage('home')}
+$('adminLoginForm').addEventListener('submit',e=>{e.preventDefault();/* Demo-only credentials: replace and secure on a server before deployment. */if($('adminUser').value==='HadiShiri'&&$('adminPass').value==='CHANGE_THIS_DEMO_PASSWORD'){adminOn=true;$('adminLogin').classList.add('hidden');$('adminDashboard').classList.remove('hidden');renderAdminMovies()}else $('adminMsg').textContent='اطلاعات مدیر اشتباه است. مقادیر نمونه را در کد بررسی کنید.'});
+function adminLogout(){adminOn=false;$('adminLogin').classList.remove('hidden');$('adminDashboard').classList.add('hidden')}
+$('uploadForm').addEventListener('submit',e=>{e.preventDefault();if(!adminOn)return;const vf=$('movieFile').files[0],pf=$('posterFile').files[0];if(!vf)return;let m={id:'u'+Date.now(),title:$('movieTitle').value.trim(),desc:$('movieDesc').value.trim(),rating:'جدید',symbol:'▶',video:URL.createObjectURL(vf),poster:pf?URL.createObjectURL(pf):'',comments:[]};movies.unshift(m);$('uploadMsg').textContent='فیلم به فهرست همین نشست اضافه شد.';$('uploadForm').reset();renderHome()});
+function renderAdminMovies(){if(!$('adminMovies'))return;$('movieCount').textContent=movies.length;$('adminMovies').innerHTML=movies.map(m=>`<div style="display:flex;justify-content:space-between;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding:10px 0"><span>${esc(m.title)}</span><button class="secondary" onclick="deleteMovie('${m.id}')">حذف</button></div>`).join('')}
+function deleteMovie(id){if(!adminOn)return;movies=movies.filter(m=>m.id!==id);renderHome()}
+renderHome();
+</script>
+</body>
+</html>
